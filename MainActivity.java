@@ -62,7 +62,6 @@ public class MainActivity<v> extends AppCompatActivity {
         initView();
         initInstance();
         eventListener();
-        //setMarker("경기과학기술대학교", 37.3390222, 126.7358078);
     }
 
     // 위젯 변수 및 필요 객체 등의 멤버 변수 초기화 작업
@@ -128,7 +127,7 @@ public class MainActivity<v> extends AppCompatActivity {
                         OnClickHandler(adptr(strings));
                     }
                     else
-                        Toast.makeText(getApplicationContext(), "검색어를 입력하세요!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "검색어를 입력하세요.", Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.btnZoomIn:
                     tMapView.MapZoomIn();
@@ -156,7 +155,6 @@ public class MainActivity<v> extends AppCompatActivity {
             tMapView.setCenterPoint(lon, lat);
             tMapView.setLocationPoint(lon,lat);
             tMapView.setIconVisibility(true);
-            // tMapView.setLocationPoint(lat, lon);
         }
 
         @Override
@@ -180,9 +178,6 @@ public class MainActivity<v> extends AppCompatActivity {
         TMapMarkerItem markerItem = new TMapMarkerItem();
 
         TMapPoint tMapPoint = new TMapPoint(lat, lon);
-
-        // Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.marker_icon);
-        // markerItem.setIcon(bitmap); // 마커 아이콘 지정
         markerItem.setPosition(0.5f, 1.0f);
         markerItem.setTMapPoint(tMapPoint);
         markerItem.setName(name); // 마커 타이틀 지정
@@ -211,7 +206,6 @@ public class MainActivity<v> extends AppCompatActivity {
                     markerItem.setCalloutTitle(item.getPOIName());
                     markerItem.setCalloutSubTitle(item.getPOIAddress());
                     markerItem.setCanShowCallout(true);
-                    // markerItem.setCalloutRightButtonImage(rightButton);
 
                     tMapView.addMarkerItem(item.getPOIName(), markerItem);
                 }
