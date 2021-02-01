@@ -1,23 +1,23 @@
 # Android / java
 
     public class MainActivity<v> extends AppCompatActivity{
-      LinearLayout linMapView;
-      Button btnZoomIn;
-      Button btnZoomOut;
-      Button btnMyLocation;
-      Button btnSearch;
-    EditText edtSearch;
-    TMapView tMapView;
-    TMapData tMapData;
-    // 검색 결과를 출력하기 위해 만든 리스트
-    ArrayList<TMapPOIItem> poiResult;
-    LocationManager locationManager;
-    Bitmap rightButton;
-    BitmapFactory.Options options;
+        LinearLayout linMapView;
+        Button btnZoomIn;
+        Button btnZoomOut;
+        Button btnMyLocation;
+        Button btnSearch;
+        EditText edtSearch;
+        TMapView tMapView;
+        TMapData tMapData;
+        // 검색 결과를 출력하기 위해 만든 리스트
+        ArrayList<TMapPOIItem> poiResult;
+        LocationManager locationManager;
+        Bitmap rightButton;
+        BitmapFactory.Options options;
     
-    String[] strings;
+        String[] strings;
 
-    ArrayAdapter<String> stringArrayAdapter = null;
+        ArrayAdapter<String> stringArrayAdapter = null;
 
 
     @Override
