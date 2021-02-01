@@ -25,9 +25,6 @@ public class CheckPermissionActivity extends AppCompatActivity {
 
         // 사용자 OS 버전 검사 -> 23 이상 버전인지 판단, 허가권 요청 정보 표시 O/X
         if(Build.VERSION.SDK_INT>= Build.VERSION_CODES.M){
-            // 사용자의 단말에 권한 중 위치 가져오기(ACCESS_FINE_LOCATION)의 권한 허가 여부를 가져온다.
-            //허가 -> PERMISSION_GRANTED
-            //거부 -> PERMISSION_DENIED
             int permissionCheck = checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION);
 
             //현재 어플리케이션이 권한에 대해 거부되었는지 확인
@@ -63,7 +60,7 @@ public class CheckPermissionActivity extends AppCompatActivity {
                     startActivity(intent);
                     finish();
                 }else{
-                    Toast.makeText(this,"권한 요청을 거부하였습니다", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this,"권한 요청을 거부하였습니다.", Toast.LENGTH_SHORT).show();
                 }
             }
         }
