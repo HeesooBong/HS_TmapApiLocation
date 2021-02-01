@@ -1,4 +1,4 @@
-# HS_TmapApiLocation
+# Android / java
 
     public class MainActivity<v> extends AppCompatActivity{
       LinearLayout linMapView;
